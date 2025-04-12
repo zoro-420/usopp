@@ -72,7 +72,8 @@ app.post("/api/login", async (req, res) => {
   
 }
   catch(error){
-
+  console.error("Failed to login", error);
+  return res.status(500).send({ message: "Failed to login", error });
   }
 
   
